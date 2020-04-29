@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+    <title>java</title>
+    <h:outputScript library="JS" name="jquery-3.4.1.min.js" />
+    <h:outputScript library="JS" name="graph.js" />
+    <h:outputStylesheet library="CSS" name="main.css" />
+</h:head>
+
+<h:body prependId="false" >
+
+    <h:form prependId="false">
+
+        <p> Выберите Х</p>
+        <h:selectOneMenu value="#{userBean.rawX}" id="X">
+            <f:selectItem itemLabel="-2" itemValue="-2"/>
+            <f:selectItem itemLabel="-1.5" itemValue="-1.5"/>
+            <f:selectItem itemLabel="-1" itemValue="-1"/>
+            <f:selectItem itemLabel="-0.5" itemValue="-0.5"/>
+            <f:selectItem itemLabel="0" itemValue="0"/>
+            <f:selectItem itemLabel="0.5" itemValue="0.5"/>
+            <f:selectItem itemLabel="1" itemValue="1"/>
+            <f:selectItem itemLabel="1.5" itemValue="1.5"/>
+        </h:selectOneMenu>
+        <p class = "message" id="messageX"></p>
+
+        <p> Введите Y [-5;5]</p>
+        <h:inputText id="Y" value="#{userBean.rawY}" maxlength="7" />
+        <p class = "message" id="messageY"><br/></p>
+        <p> Выберите R</p>
+        <h:selectOneRadio id="R" value="#{userBean.rawR}" onchange="printArea(this.value);drawPoints()">
+           <f:selectItem itemValue="1" itemLabel="1"/>
+           <f:selectItem itemValue="2" itemLabel="2"/>
+           <f:selectItem itemValue="3" itemLabel="3"/>
+           <f:selectItem itemValue="4" itemLabel="4"/>
+           <f:selectItem itemValue="5" itemLabel="5"/>
+        </h:selectOneRadio>
+        <p class = "message" id="messageR"></p>
+
+        <h:commandButton value = "Отправить" action="#{userBean.addToList}" onclick="return validateY();">
+            <f:ajax render="result_table" execute="@form"></f:ajax>
+        </h:commandButton>
+    </h:form>
+
+    <h:form prependId="false" id="form2">
+        <h:inputHidden id="formHiddenX" value="#{userBean.rawX}"/>
+        <h:inputHidden id="formHiddenY" value="#{userBean.rawY}"/>
+        <h:inputHidden id="formHiddenR" value="#{userBean.rawR}"/>
+    </h:form>
+    <div id="table">
+        <h:dataTable value="#{userBean.getList()}" var="pip2Entity" id="result_table" >
+            <h:column>
+                <f:facet name="header">X</f:facet>
+                #{pip2Entity.x}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Y</f:facet>
+                #{pip2Entity.y}
+            </h:column>
+            <h:column>
+                <f:facet name="header">R</f:facet>
+                #{pip2Entity.r}
+            </h:column>
+            <h:column>
+                <f:facet name="header">isArea</f:facet>
+                #{pip2Entity.isinarea}
+            </h:column>
+
+        </h:dataTable>
+    </div>
+
+    <div class="picture">
+        <canvas width="300" height="300" id="areas" />
+        <p:remoteCommand name="canvasAction" form="form2" action="#{userBean.addToList}" update="result_table" />
+    </div>
+
+
+
+    <h:form prependId="false" id="back">
+        <h:commandButton value = "Back" action="toIndex" />
+    </h:form>
+
+
+
+</h:body>
+</html>

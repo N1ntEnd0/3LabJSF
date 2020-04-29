@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="3test:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/3test_war_exploded.war</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="3test/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="3test" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Mojarra-2.4.0" />
+          <element id="library" level="project" name="Hibernate 5.4.9-5.4.9" />
+          <element id="library" level="project" name="postgresql-42.2.6" />
+          <element id="library" level="project" name="primefaces-7.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
