@@ -12,6 +12,7 @@
           <element id="library" level="project" name="Hibernate 5.4.9-5.4.9" />
           <element id="library" level="project" name="postgresql-42.2.6" />
           <element id="library" level="project" name="primefaces-7.0" />
+          <element id="library" level="project" name="junit:junit:4.12" />
         </element>
       </element>
     </root>
