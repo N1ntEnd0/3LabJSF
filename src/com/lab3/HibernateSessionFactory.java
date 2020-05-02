@@ -11,11 +11,11 @@ public class HibernateSessionFactory {
     private static final SessionFactory sessionFactory;
     static {
         try {
-            ServletContext ctx = (ServletContext) FacesContext
-                    .getCurrentInstance().getExternalContext().getContext();
-            String deploymentDirectoryPath = ctx.getRealPath("/");
+//            ServletContext ctx = (ServletContext) FacesContext
+//                    .getCurrentInstance().getExternalContext().getContext();
+//            String deploymentDirectoryPath = ctx.getRealPath("/");
             sessionFactory = new Configuration()
-                    .configure(new File(deploymentDirectoryPath+ "/WEB-INF/hibernate.cfg.xml"))
+                    .configure(new File("web/WEB-INF/hibernate.cfg.xml"))
                     .buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
