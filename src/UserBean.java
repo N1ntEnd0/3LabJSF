@@ -1,5 +1,5 @@
-import abc.HibernateSessionFactory;
-import abc.Pip2Entity;
+import com.lab3.HibernateSessionFactory;
+import com.lab3.Pip2Entity;
 import org.hibernate.Session;
 
 import java.util.ArrayList;

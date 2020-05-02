@@ -5,14 +5,14 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:16020/postgres</property>
-        <property name="hibernate.connection.password">nxa928</property>
-        <property name="hibernate.connection.username">s250651</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/lab7</property>
+        <property name="hibernate.connection.password">ygt183</property>
+        <property name="hibernate.connection.username">vlad</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="connection.pool_size">100</property>
-        <mapping class="abc.Pip2Entity"/>
+        <mapping class="com.lab3.Pip2Entity"/>
     </session-factory>
 </hibernate-configuration>
 
