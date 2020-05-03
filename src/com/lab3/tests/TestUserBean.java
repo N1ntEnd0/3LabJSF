@@ -1,10 +1,9 @@
-package tests;
+package com.lab3.tests;
 
 import com.lab3.HibernateSessionFactory;
 import com.lab3.Pip2Entity;
 import org.hibernate.Session;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -35,7 +34,7 @@ public class TestUserBean {
             e.printStackTrace();
             System.out.println("Ошибка парсинга");
         }
-        Assert.fail("It's only for tests )");
+        Assert.fail("It's only for com.lab3.tests )");
     }
 
     @Test

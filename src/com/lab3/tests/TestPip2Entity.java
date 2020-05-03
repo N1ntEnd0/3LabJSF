@@ -1,4 +1,4 @@
-package tests;
+package com.lab3.tests;
 
 import com.lab3.Pip2Entity;
 import org.junit.Assert;

@@ -1,3 +1,5 @@
+package com.lab3;
+
 import com.lab3.HibernateSessionFactory;
 import com.lab3.Pip2Entity;
 import org.hibernate.Session;
