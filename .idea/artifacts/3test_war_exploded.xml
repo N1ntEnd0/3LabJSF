@@ -13,6 +13,8 @@
           <element id="library" level="project" name="postgresql-42.2.6" />
           <element id="library" level="project" name="primefaces-7.0" />
           <element id="library" level="project" name="junit:junit:4.12" />
+          <element id="library" level="project" name="org.hamcrest:hamcrest-all:1.3" />
+          <element id="library" level="project" name="ant:ant-junit:1.6.5" />
         </element>
       </element>
     </root>
