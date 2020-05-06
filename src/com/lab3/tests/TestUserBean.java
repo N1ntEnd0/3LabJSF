@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 import java.util.Collections;
 import java.util.List;
 

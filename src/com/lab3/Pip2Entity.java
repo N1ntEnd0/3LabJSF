@@ -1,10 +1,11 @@
 package com.lab3;
 
 import javax.persistence.*;
-import java.util.Objects;
+
 
 @Entity
 @Table
+1
 public class Pip2Entity {
     /*(name = "role", schema = "s250651")*/
     @Id
