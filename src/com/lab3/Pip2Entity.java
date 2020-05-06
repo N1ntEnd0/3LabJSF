@@ -1,8 +1,13 @@
 package com.lab3;
 
 import javax.persistence.*;
+<<<<<<< HEAD
 
 
+=======
+import java.util.Objects;
+1
+>>>>>>> 543ca8206439dc4aa4839bf070e90c68e5781581
 @Entity
 @Table
 1
