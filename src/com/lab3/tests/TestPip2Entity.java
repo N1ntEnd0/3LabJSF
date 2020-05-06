@@ -4,7 +4,7 @@ import com.lab3.Pip2Entity;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestPip2Entity extends Pip2Entity{
+public class TestPip2Entity{
     private Pip2Entity point;
 
     @Test
