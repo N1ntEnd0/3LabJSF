@@ -2,7 +2,7 @@ package com.lab3;
 
 import javax.persistence.*;
 import java.util.Objects;
-
+1
 @Entity
 @Table
 public class Pip2Entity {
