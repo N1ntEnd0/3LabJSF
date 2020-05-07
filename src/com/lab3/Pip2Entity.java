@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Objects;
 @Entity
 @Table
-
+oh its compile error?)
 public class Pip2Entity {
     /*(name = "role", schema = "s250651")*/
     @Id
